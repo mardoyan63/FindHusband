@@ -31,30 +31,36 @@ class SelectionList extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            cards: [require('../../assets/girl.jpg'), require('../../assets/girl.jpg'), require('../../assets/girl.jpg'), require('../../assets/girl.jpg'), require('../../assets/girl.jpg'), require('../../assets/girl.jpg')]
+            cards: [
+                require('../../assets/app-images/girl.jpg'),
+                require('../../assets/app-images/girl.jpg'),
+                require('../../assets/app-images/girl.jpg'),
+                require('../../assets/app-images/girl.jpg'),
+                require('../../assets/app-images/girl.jpg'),
+                require('../../assets/app-images/girl.jpg')
+            ],
+            loading: false
         }
-        
+
     }
     componentWillMount() {
-        BackHandler.addEventListener('hardwareBackPress', () => { return false });
+        BackHandler.addEventListener('hardwareBackPress', () => { return true });
     }
 
     getList() {
         this.setState({
-            loading:true
+            loading: true
         })
-        API.getInfo().then((res)=>{
+        API.getInfo().then((res) => {
             console.log('I get API');
-            this.props.onGetPersonsList({name: 'Rado'})
+            this.props.onGetPersonsList({ name: 'Rado' })
             this.setState({
-                loading:false
-            },)
+                loading: false
+            }, )
         })
     }
 
     render() {
-        console.log(this.props.store);
-        
         return (
             <View style={styles.container}>
                 <Header

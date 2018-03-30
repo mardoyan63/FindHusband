@@ -17,10 +17,6 @@ import {RkTheme} from 'react-native-ui-kitten';
 import {scale, scaleModerate, scaleVertical} from '../../../utils/scale';
 
 export class EnterProfile extends React.Component {
-  static navigationOptions = {
-    header: null
-  };
-
   constructor(props) {
     super(props);
   }
@@ -59,7 +55,7 @@ removeValue = async () => {
     return (
         <View style={styles.screen}>
         <View style={styles.header}>
-        <Image style={styles.image} source={require('../../../assets/girl.jpg')}/>
+        <Image style={styles.image} source={require('../../../assets/app-images/girl.jpg')}/>
         </View>
         <View style={styles.content}>
           <View>

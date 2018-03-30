@@ -48,11 +48,10 @@ let styles = RkStyleSheet.create(theme => ({
     width: 8,
     height: 8,
     borderRadius: 5,
-    borderColor: theme.colors.brand,
-    borderWidth: 1,
-    marginHorizontal: 5
+    marginHorizontal: 11,
+    backgroundColor: '#e2e2e2'
   },
   selected: {
-    backgroundColor: theme.colors.brand
+    backgroundColor: '#fab2ae'
   }
 }));

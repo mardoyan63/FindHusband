@@ -18,10 +18,6 @@ import {scale, scaleModerate, scaleVertical} from '../../../utils/scale';
 import { Text } from 'react-native'
 
 export class RegistrationProfile extends React.Component {
-  static navigationOptions = {
-    header: null
-  };
-
   constructor(props) {
     super(props);
   }

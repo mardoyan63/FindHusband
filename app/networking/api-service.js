@@ -1,5 +1,5 @@
 export default class API{
-    static async getInfo() {
+    async getInfo() {
         let params = {
             action: 'getInfo',
             id: '152'
